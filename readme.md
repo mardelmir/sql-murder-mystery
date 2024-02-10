@@ -2,15 +2,23 @@
 
 ## Solución con explicación
 ### 1. Petición para seleccionar el informe con las pistas iniciales
+Originalmente, solo sabemos que existe un informe sobre el suceso con las siguientes características:
+  - Se produjo en SQL City
+  - La fecha del informe es 15 de enero de 2018
+  - El tipo de crimen es asesinato
+
 ```SQL
 SELECT * FROM crime_scene_report
 WHERE date = 20180115 
 AND type = 'murder'
 AND city = 'SQL City'
 ```
+La coincidencia devuelta indica que las cámaras de seguridad muestra que hubo dos testigos:
+- El primero vive en la última casa de "Northwestern Dr"
+- El segundo se llama Annabel y vive en una de las casas de "Franklin Ave"
 
 ### 2. Petición de búsqueda de los testigos y acceso a sus interrogatorios
-JOIN de las tablas person (identificación de los testigos) e interview (transcrito de sus interrogatorios)
+JOIN de las tablas person (identificación de los testigos) e interview (transcrito de sus interrogatorios) para acceder a toda la información
 ```SQL
 SELECT 
 	person.id, 
