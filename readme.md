@@ -66,7 +66,7 @@ OR person_id = 16371 -- Coincide con Annabel en el gimnasio
 
 La única coincidencia devuelta es Jeremy Bowers, sin embargo en el mensaje de la solución nos indican que a Jeremy le han encargado la ejecución del asesinato y que no es el verdadero cerebro de la operación. Si queremos saber quién está detrás de todo necesitamos acceder al interrogatorio de Jeremy
 
-### Petición para acceder al interrogatorio de Jeremy e información sobre el verdadero asesino
+### 4. Petición para acceder al interrogatorio de Jeremy e información sobre el verdadero asesino
 ```SQL
 SELECT * FROM interview
 WHERE person_id = 67318
@@ -80,7 +80,7 @@ Del transcrito de este interrogatorio sabemos que:
 
 
 
-### Petición para identificar al verdadero asesino
+### 5. Petición para identificar al verdadero asesino
 ```SQL
 SELECT 
 	person.id,
